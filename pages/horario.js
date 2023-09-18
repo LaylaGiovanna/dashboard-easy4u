@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const tutorials = () => {
+const horario = () => {
   return (
-    <Layout>tutorials</Layout>
+    <Layout>horario</Layout>
   )
 }
 
-export default tutorials
+export default horario

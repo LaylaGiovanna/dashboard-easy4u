@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const posts = () => {
+const produtos = () => {
   return (
-    <Layout>posts</Layout>
+    <Layout>Produtos</Layout>
   )
 }
 
-export default posts
+export default produtos

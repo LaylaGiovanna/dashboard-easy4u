@@ -1,24 +1,27 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, } from "react";
+import { FaHamburger } from 'react-icons/fa';
 import {
   ArticleIcon,
   CollapsIcon,
   HomeIcon,
-   LogoIcon,
+  LogoIcon,
   LogoutIcon,
   UsersIcon,
   VideosIcon,
+  // HamburguerIcon,
 } from "./icons";
 
 
 // essas são as rotas a partir dos icons de menu
 const menuItems = [
-  { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Manage Posts", icon: ArticleIcon, link: "/posts" },
-  { id: 3, label: "Manage Users", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Manage Tutorials", icon: VideosIcon, link: "/tutorials" },
+  { id: 1, label: "Menu", icon: HomeIcon, link: "/" },
+  { id: 2, label: "Produtos", icon: ArticleIcon, link: "/produtos" },
+  { id: 3, label: "Pedidos", icon: UsersIcon, link: "/pedidos" },
+  { id: 4, label: "Horário", icon: VideosIcon, link: "/horario" },
+  { id: 5, label: "Verificar QrCode", icon: VideosIcon, link: "/qrCode" },
 ];
 
 const Sidebar = () => {
@@ -78,11 +81,12 @@ const Sidebar = () => {
       style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}
     >
       <div className="flex flex-col">
-        <div className="flex items-center justify-between relative h-32 bg-primary">
-          <div className="flex items-center pl-1 gap-4">
-             {/* LogoIcon é o icone criado para uso no video */}
-              {/* esse bloco de código serve para esconder o icone de seta */}
-            <LogoIcon/>
+        <div className="flex items-center justify-between relative ">
+          <div className="flex items-center pl-1 gap-4 " >
+            {/* LogoIcon é o icone criado para uso no video */}
+            {/* esse bloco de código serve para esconder o icone de seta */}
+            <LogoIcon />
+
             {/* <span
               className={classNames("mt-2 text-lg font-medium text-text", {
                 hidden: toggleCollapse,
@@ -100,10 +104,11 @@ const Sidebar = () => {
             >
               <CollapsIcon />
             </button>
+            
           )}
         </div>
 
-        <div className="flex flex-col items-start mt-24">
+        <div className="flex flex-col items-start mt-40 ">
           {menuItems.map(({ icon: Icon, ...menu }) => {
             const classes = getNavItemClasses(menu);
             return (

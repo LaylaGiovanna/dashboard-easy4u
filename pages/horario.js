@@ -3,7 +3,8 @@ import Layout from '../components/Layout'
 
 const horario = () => {
   return (
-    <Layout>horario</Layout>
+    <Layout>
+      <div className='text-text'>horario</div></Layout>
   )
 }
 

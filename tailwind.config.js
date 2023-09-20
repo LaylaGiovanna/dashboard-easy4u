@@ -21,7 +21,10 @@ module.exports = {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
-      'red': 'rgba(236, 76, 110, 12%)',
+      'redTransparent': 'rgba(236, 76, 110, 25%)',
+      'red': 'rgba(236, 76, 110)',
+      'gray': 'rgba(7, 16, 47, 32%)',
+      // EC4C6E
       text: {
         DEFAULT: "#1F2937",
         light: "#6C7281",
@@ -43,7 +46,7 @@ module.exports = {
         'button-card-1': "400px",
       },
       boxShadow: {
-        'shadow-button': "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
+        'shadow-button': "2px 3px 4px 3px rgba(0, 0, 0, 0.2)",
       },
       minHeightImage: {  
         'card-home-2': "144px",

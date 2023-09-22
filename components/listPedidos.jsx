@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ImageTeste from "../components/icons/images/foto-perfil-1.png"
 
 const List = (props) => {
     return (

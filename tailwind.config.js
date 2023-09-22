@@ -54,6 +54,18 @@ module.exports = {
       heightCardPedidos: {
         'card-home-pedidos': "770px",
       },
+      heightCardOrder: {
+        'card-home-order': "500px",
+      },
+      heightCardProdutos: {
+        'card-produtos': "1090px",
+      },
+      widthCardProdutos: {
+        'card-produtos': "594px",
+      },
+      heightCardProdutos: {
+        'div-card': '97%',
+      },
     },
   },
   plugins: [],

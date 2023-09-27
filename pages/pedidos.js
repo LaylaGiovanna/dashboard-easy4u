@@ -1,8 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const pedidos = () => {
-  return <Layout>pedidos</Layout>;
+export default function Pedidos(){
+  return (
+    <Layout>
+      <div className='text-text bg-bubble-gum'>Pedidos</div></Layout>
+  )
 };
-
-export default pedidos;

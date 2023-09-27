@@ -14,14 +14,22 @@ import {
   // HamburguerIcon,
 } from "./icons";
 
+import { 
+  IconHome2,
+  IconCoffee,
+  IconUser,
+  IconFileDescription,
+  IconQrcode
+ } from '@tabler/icons-react';
+
 
 // essas são as rotas a partir dos icons de menu
 const menuItems = [
-  { id: 1, label: "Menu", icon: HomeIcon, link: "/" },
-  { id: 2, label: "Produtos", icon: ArticleIcon, link: "/produtos" },
-  { id: 3, label: "Pedidos", icon: UsersIcon, link: "/pedidos" },
-  { id: 4, label: "Horário", icon: VideosIcon, link: "/horario" },
-  { id: 5, label: "Verificar QrCode", icon: VideosIcon, link: "/qrCode" },
+  { id: 1, label: "Menu", icon: (() => <IconHome2 color='#979797' width={26} height={26}/>), link: "/" },
+  { id: 2, label: "Produtos", icon: (() => <IconCoffee color='#979797' width={26} height={26}/>), link: "/produtos" },
+  { id: 3, label: "Colaborador", icon: (() => <IconUser color='#979797' width={26} height={26}/>), link: "/colaborador" },
+  { id: 4, label: "Pedidos", icon: (() => <IconFileDescription color='#979797' width={26} height={26}/>), link: "/pedidos" },
+  { id: 5, label: "Verificar QrCode", icon: (() => <IconQrcode color='#979797' width={26} height={26}/>), link: "/qrCode" },
 ];
 
 const Sidebar = () => {

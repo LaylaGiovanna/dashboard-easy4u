@@ -1,8 +1,10 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const qrCode = () => {
-  return <Layout>qrCode</Layout>;
+export default function QrCode() {
+  return (
+    <Layout>
+      <div className='text-text bg-bubble-gum'>QrCode</div>
+    </Layout>
+  )
 };
-
-export default qrCode;

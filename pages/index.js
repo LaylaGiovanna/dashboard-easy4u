@@ -3,7 +3,7 @@ import DinheiroIcon from "../components/icons/images/iconDinheiro.jpg";
 import ImagemPao from "../components/icons/images/imagemPao.png";
 import ImagemFruta from "../components/icons/images/imagemFruta.png";
 import Image from "next/image";
-import { IconTriangleInvertedFilled, IconTriangleInverted, } from "@tabler/icons-react";
+import { IconArrowDown } from '@tabler/icons-react';
 import React from "react";
 import ListOrder from "../components/listPedidos";
 import ImagePerfil1 from "../components/icons/images/foto-perfil-1.png";
@@ -44,7 +44,7 @@ export default function Home() {
                 <div className="top-0 flex items-center gap-3  justify-end ">
                   <button className="text-text-green">Verificar</button>
                   <div className="flex items-center justify-center h-7 w-7 bg-redTransparent rounded-full">
-                    <IconTriangleInvertedFilled class="icon-triangle" size={13} color="red" />
+                    <IconArrowDown class="icon-triangle" color='#EC4C6E' width={20} height={20} />
                   </div>
                 </div>
               </div>

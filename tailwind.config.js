@@ -15,6 +15,8 @@ module.exports = {
       blue: '#1fb6ff',
       purple: '#7e5bef',
       pink: '#ff49db',
+      grayMedium: '#E5E5E5',
+      lightOrange: '#FFB29D',
       'midnight': '#121063',
       'metal': '#565584',
       'tahiti': '#3ab7bf',
@@ -22,7 +24,7 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'redTransparent': 'rgba(236, 76, 110, 25%)',
-      'red': 'rgba(236, 76, 110)',
+      'red': 'rgb(236, 76, 110)',
       'gray': 'rgba(7, 16, 47, 32%)',
       // EC4C6E
       text: {

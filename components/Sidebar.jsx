@@ -14,26 +14,26 @@ import {
   // HamburguerIcon,
 } from "./icons";
 
-import { 
+import {
   IconHome2,
   IconCoffee,
   IconUser,
   IconFileDescription,
   IconQrcode
- } from '@tabler/icons-react';
+} from '@tabler/icons-react';
 
 
 // essas são as rotas a partir dos icons de menu
 const menuItems = [
-  { id: 1, label: "Menu", icon: (() => <IconHome2 color='#979797' width={26} height={26}/>), link: "/" },
-  { id: 2, label: "Produtos", icon: (() => <IconCoffee color='#979797' width={26} height={26}/>), link: "/produtos" },
-  { id: 3, label: "Colaborador", icon: (() => <IconUser color='#979797' width={26} height={26}/>), link: "/colaborador" },
-  { id: 4, label: "Pedidos", icon: (() => <IconFileDescription color='#979797' width={26} height={26}/>), link: "/pedidos" },
-  { id: 5, label: "Verificar QrCode", icon: (() => <IconQrcode color='#979797' width={26} height={26}/>), link: "/qrCode" },
+  { id: 1, label: "Menu", icon: (() => <IconHome2 color='#979797' width={26} height={26} />), link: "/" },
+  { id: 2, label: "Produtos", icon: (() => <IconCoffee color='#979797' width={26} height={26} />), link: "/produtos" },
+  { id: 3, label: "Colaborador", icon: (() => <IconUser color='#979797' width={26} height={26} />), link: "/colaborador" },
+  { id: 4, label: "Pedidos", icon: (() => <IconFileDescription color='#979797' width={26} height={26} />), link: "/pedidos" },
+  { id: 5, label: "Verificar QrCode", icon: (() => <IconQrcode color='#979797' width={26} height={26} />), link: "/qrCode" },
 ];
 
 const Sidebar = () => {
-      //[ estado inicial, estado final ] 
+  //[ estado inicial, estado final ] 
   const [toggleCollapse, setToggleCollapse] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
@@ -54,9 +54,9 @@ const Sidebar = () => {
     }
   );
 
-   // serve para rotacionar o icon da abertura e fechamento da sidebar
+  // serve para rotacionar o icon da abertura e fechamento da sidebar
   const collapseIconClasses = classNames(
-    "p-4 rounded bg-light-lighter absolute right-0",
+    "p-4 rounded bg-light-lighter absolute right-0 ",
     {
       "rotate-180": toggleCollapse,
     }
@@ -64,7 +64,7 @@ const Sidebar = () => {
 
   const getNavItemClasses = (menu) => {
     return classNames(
-      "flex items-center cursor-pointer hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap",
+      " flex items-center cursor-pointer hover:bg-light-lighter rounded w-full overflow-hidden whitespace-nowrap",
       {
         ["bg-light-lighter"]: activeMenu.id === menu.id,
       }
@@ -88,32 +88,26 @@ const Sidebar = () => {
       onMouseLeave={onMouseOver}
       style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s" }}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         <div className="flex items-center justify-between relative ">
           <div className="flex items-center pl-1 gap-4 " >
             {/* LogoIcon é o icone criado para uso no video */}
             {/* esse bloco de código serve para esconder o icone de seta */}
             <LogoIcon />
-
-            {/* <span
-              className={classNames("mt-2 text-lg font-medium text-text", {
-                hidden: toggleCollapse,
-              })}
-            >
-              Logo
-            </span> */}
           </div>
           {/* essas linhas do button servem para dizer 
             que pode ser fechado e aberto novamente */}
-          {isCollapsible && (
-            <button
-              className={collapseIconClasses}
-              onClick={handleSidebarToggle}
-            >
-              <CollapsIcon />
-            </button>
-            
-          )}
+          <div className="bg-tahiti">
+            {isCollapsible && (
+              <button
+                className={collapseIconClasses}
+                onClick={handleSidebarToggle}
+              >
+                <CollapsIcon />
+              </button>
+
+            )}
+          </div>
         </div>
 
         <div className="flex flex-col items-start mt-40 ">
@@ -129,7 +123,7 @@ const Sidebar = () => {
                     {!toggleCollapse && (
                       <span
                         className={classNames(
-                          "text-md font-medium text-text-light"
+                          "text-md font-medium"
                         )}
                       >
                         {menu.label}

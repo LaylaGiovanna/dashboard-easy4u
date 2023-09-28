@@ -34,26 +34,26 @@ const TableProdutos = (props, type) => {
                                                 Disponibilidade
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Edições
+                                                Ações
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr className=" text-sm font-medium dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                            <td scope="row" className="px-6 py-4  bg-primary">
-                                                <span className="w-[38px] h-[38px] rounded-xl bg-pink">
-                                                    <Image className="rounded-lg" src={ImageTeste} alt="imagem teste" height={38} width={38}  />
+                                            <td scope="row" className="px-6 py-4">
+                                                <span className="items-center justify-center w-[38px] h-[38px]">
+                                                    <Image className="rounded-full" src={ImageTeste} alt="imagem teste" height={38} width={38} />
                                                 </span>
-                                                
+
                                             </td>
                                             <td className="px-6 py-4 ">
-                                                Silver
+                                                1
                                             </td>
                                             <td className="px-6 py-4">
-                                                Laptop
+                                                Salgado Assado
                                             </td>
                                             <td className="px-6 py-4">
-                                                $2999
+                                                R$5,50
                                             </td>
                                             <td className="px-6 py-4 text-right">
                                                 <div class="relative inline-flex">
@@ -92,50 +92,36 @@ const TableProdutos = (props, type) => {
                                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
                                     <thead className="overflow-auto text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                         <tr className='sticky top-0 bg-primary text-white'>
-                                            <th scope="col" className=" px-6 py-3">
-                                                testeeeeeee
-                                            </th>
                                             <th scope="col" className="px-6 py-3">
-                                                ID Produto
+                                                ID
                                             </th>
                                             <th scope="col" className="px-6 py-3">
                                                 Nome
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Preço
+                                                Email
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Disponibilidade
+                                                Tipo
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Edições
+                                                Ações
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr className=" text-sm font-medium dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                                Apple MacBook Pro 17"
+                                                1
                                             </th>
                                             <td className="px-6 py-4 ">
-                                                Silver
+                                                Beatriz Landi
                                             </td>
                                             <td className="px-6 py-4">
-                                                Laptop
+                                                Beatriz.landi.coelho@gmail.com
                                             </td>
                                             <td className="px-6 py-4">
-                                                $2999
-                                            </td>
-                                            <td className="px-6 py-4 text-right">
-                                                <div class="relative inline-flex">
-                                                    <select class="appearance-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 focus:outline-none focus:ring focus:border-blue-500 sm:text-sm">
-                                                        <option>Sim</option>
-                                                        <option>Não</option>
-                                                    </select>
-                                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                    </div>
-                                                </div>
+                                                Colaborador
                                             </td>
                                             <td className='flex px-6 py-4  gap-3 items-center justify-around'>
                                                 <IconEdit color='#979797' width={24} height={24} />
@@ -163,7 +149,7 @@ export const RowTable = (props) => {
                 <td scope="row" className="px-6 py-4">
                     {props.cellContent}
                 </td>
-                
+
                 <td className="px-6 py-4 text-right">
                     <div class="relative inline-flex">
                         <select class="appearance-none bg-white border border-gray-300 rounded-md pl-3 pr-10 py-2 focus:outline-none focus:ring focus:border-blue-500 sm:text-sm">

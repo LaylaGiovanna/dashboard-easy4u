@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { IconEdit } from '@tabler/icons-react';
 import { IconTrash } from '@tabler/icons-react';
-import TableProdutos from "../components/tableProdutos";
+import TableProdutos from "../components/tablesProdutosColaboradores";
 
 const produtos = () => {
   
@@ -18,6 +18,7 @@ const produtos = () => {
 
         <div className='flex items-center justify-center h-full '>
           <TableProdutos Type="tableProdutos"/>
+          
         </div>
       </div>
     </Layout>

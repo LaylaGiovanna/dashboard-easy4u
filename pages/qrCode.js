@@ -7,7 +7,7 @@ import TakePhoto from "../components/icons/images/take-photo.png";
 export default function QrCode() {
   return (
     <Layout>
-      <div className='flex flex-col h-full justify-center'>
+      <div className='flex flex-col h-full justify-center bg-second'>
         <div className='flex items-end justify-center h-1/2 '>
           <span className="text-text text-xl font-semibold tracking-wide">
             Leitor de pedidos QRCode

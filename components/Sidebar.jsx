@@ -143,7 +143,7 @@ const Sidebar = () => {
           <LogoutIcon />
         </div>
         {!toggleCollapse && (
-          <span className={classNames("text-md font-medium text-text-light")}>
+          <span className={classNames("text-md font-medium text-white")}>
             Logout
           </span>
         )}

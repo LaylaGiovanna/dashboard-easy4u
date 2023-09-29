@@ -15,7 +15,7 @@ import CardProdutos from "../components/cardProdutos";
 
 export default function Home() {
   return <Layout>
-    <div className="grid grid-cols-2  items-center h-full">
+    <div className="grid grid-cols-2  items-center h-full bg-second">
 
       {/* Div coluna 1 */}
       <div class="flex flex-col justify-around p-12 items-center h-full">

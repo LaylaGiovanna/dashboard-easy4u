@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         />
       </Helmet>
       <Sidebar />
-      <div className=" flex-1 p-4 text-white">
+      <div className=" flex-1  text-white">
           {children}
       </div>
     </div>

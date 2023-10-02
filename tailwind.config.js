@@ -18,6 +18,7 @@ module.exports = {
       grayMedium: '#E5E5E5',
       lightOrange: '#FFB29D',
       second:'#f7fafc',
+      gradientBackground: '51% #CBCBCB',
       'midnight': '#121063',
       'metal': '#565584',
       'tahiti': '#3ab7bf',
@@ -27,6 +28,7 @@ module.exports = {
       'redTransparent': 'rgba(236, 76, 110, 25%)',
       'red': 'rgb(236, 76, 110)',
       'gray': 'rgba(7, 16, 47, 32%)',
+      'gradient': 'rgba(203, 203, 203, 51%)',
       // EC4C6E
       text: {
         DEFAULT: "#1F2937",
@@ -39,6 +41,9 @@ module.exports = {
       },
     },
     extend: {
+      linearGradient: {
+        'custom-gradient': '51% #CBCBCB, 0% #777777',
+      },
       minHeight:{
         'card-home-1': "270px",
       },

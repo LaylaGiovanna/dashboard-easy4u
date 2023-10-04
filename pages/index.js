@@ -14,8 +14,11 @@ import CardProdutos from "../components/cardProdutos";
 
 
 export default function Home() {
+  function redirectPedidos() {
+    var urlDestino = "/pedidos";
+    window.location.assign(urlDestino);
+}
 
-  
   return (
     <>
       <Layout>
@@ -23,10 +26,10 @@ export default function Home() {
 
           {/* Div coluna 1 */}
           <div class="flex flex-col justify-around p-12 items-center h-full">
-            <CardCreditos title="Crédito" subtitle="Adicione créditos ao seus usuários" button="Verificar" titleButton="Créditos da Cantina" src={DinheiroIcon} alt="Icone de dinheiro" height={80} width={68} />
+            <CardCreditos title="Crédito" subtitle="Adicione créditos ao seus usuários" titleButton="Créditos da Cantina" src={DinheiroIcon} alt="Icone de dinheiro" height={80} width={68} />
 
             {/* Card 2 - card de produtos */}
-            <CardProdutos title="Produtos" subtitle="Adicione os produtos disponíveis" titleButton="Verificar" src={ImagemPao} alt="Imagem de pão" titleProduto="Bread" />
+            <CardProdutos title="Produtos" subtitle="Adicione os produtos disponíveis" titleButton="Verificar" src1={ImagemPao} src2={ImagemFruta} src3={ImagemPao} src4={ImagemFruta} alt="Imagem de pão" titleProduto1="Bread" titleProduto2="Fruits" titleProduto3="Bread" titleProduto4="Fruits" />
 
           </div>
 
@@ -46,7 +49,7 @@ export default function Home() {
                     </div>
 
                     <div className="top-0 flex items-center gap-3  justify-end ">
-                      <button className="text-text-green">Verificar</button>
+                      <button onClick={redirectPedidos} className="text-text-green">Verificar</button>
                       <div className="flex items-center justify-center h-7 w-7 bg-redTransparent rounded-full">
                         <IconArrowDown class="icon-triangle" color='#EC4C6E' width={20} height={20} />
                       </div>

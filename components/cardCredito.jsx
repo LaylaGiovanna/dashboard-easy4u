@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const CardCreditos = (props) => {
+    // modal de adicionar credito open and close
     const [isOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
@@ -11,6 +12,17 @@ const CardCreditos = (props) => {
 
     const closeModal = () => {
         setIsOpen(false);
+    };
+
+    // modal de confimação open and close
+    const [isOpenEdit, setIsOpenEdit] = useState(false);
+
+    const openModalEdit = () => {
+        setIsOpenEdit(true);
+    };
+
+    const closeModalEdit = () => {
+        setIsOpenEdit(false);
     };
 
     return (
@@ -36,6 +48,8 @@ const CardCreditos = (props) => {
                         </div>
 
                     </div>
+
+                    {/* Modal de adicionar credito */}
                     {isOpen && (
                         <div className="bg-gradient fixed inset-0 flex items-center justify-center z-50">
                             <div className="grid modal-container rounded-lg p-4 w-[680px] h-fit bg-white">
@@ -66,16 +80,74 @@ const CardCreditos = (props) => {
                                             </div>
                                         </div>
 
-                                        <div className="flex justify-end h-16 gap-4 ">
+                                    </form>
+                                    <div className="flex w-full justify-end h-16 gap-4">
+                                        <div className=" flex justify-end h-16 gap-4 ">
                                             <button
                                                 onClick={closeModal}
                                                 className="border text-text h-11 py-2 px-4 rounded ">
                                                 Cancelar
                                             </button>
+                                        </div>
+                                        <div className="flex justify-end h-16 gap-4 ">
+                                            <button
+                                                onClick={openModalEdit}
+                                                type="submit"
+                                                className="bg-primary border-text border h-11 text-white py-2 px-4 rounded">
+                                                Confirmar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Modal de edição */}
+                    {isOpenEdit && (
+                        <div className="bg-gradient fixed inset-0 flex items-center justify-center z-50">
+                            <div className="grid modal-container rounded-lg p-4 min-w-[465px] h-fit text-text bg-white">
+                                <div className="flex flex-col modal-content g p-4 rounded-xl">
+                                    <span className="text-lg font-semibold my-4 ">Tem certeza que deeseja enviar?</span>
+                                    <form className="fle flex-col justify-between">
+                                        <div className="mt-1 mb-6">
+                                            <span className="font-extralight text-gray" htmlFor="campo">Você está enviando os créditos para:</span>
+                                        </div>
+
+                                        <div className='mb-5'>
+                                            {/* div do email */}
+                                            <div className="flex text-gray gap-2 min-w-4/5">
+                                                <div>
+                                                    <span>Email:</span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        matheus.siqueira100@gmail.com
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            {/* div do crédito */}
+                                            <div className="flex text-gray gap-2 min-w-4/5">
+                                                <div>
+                                                    <span> Créditos:</span>
+                                                </div>
+                                                <div>
+                                                    R$ <span>100,00</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div className="flex justify-center h-16 gap-4 ">
+                                            <button
+                                                onClick={closeModal}
+                                                className="border text-text h-11 py-2 px-14 rounded ">
+                                                Cancelar
+                                            </button>
                                             <button
 
                                                 type="submit"
-                                                className="bg-primary border-text border h-11 text-white py-2 px-4 rounded">
+                                                className="bg-primary border-text border h-11 text-white py-2 px-14 rounded">
                                                 Confirmar
                                             </button>
                                         </div>
@@ -84,6 +156,7 @@ const CardCreditos = (props) => {
                             </div>
                         </div>
                     )}
+
 
                 </div>
             </div>

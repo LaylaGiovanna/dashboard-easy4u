@@ -11,13 +11,14 @@ import ImagePerfil2 from "../components/icons/images/foto-perfil-2.png";
 import ImagePerfil3 from "../components/icons/images/foto-perfil-3.png";
 import CardCreditos from "../components/cardCredito";
 import CardProdutos from "../components/cardProdutos";
+import { useState } from "react";
 
 
 export default function Home() {
   function redirectPedidos() {
     var urlDestino = "/pedidos";
     window.location.assign(urlDestino);
-}
+  }
 
   return (
     <>
